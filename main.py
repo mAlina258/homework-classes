@@ -1,12 +1,18 @@
-from zoo import *
+from BaseAnimal import *
+from FoxAnimal import *
 
-f=Fox("Ник", 2)
-f.DoSound()
-f.Eat("мороженое")
+f = [FoxAnimal("Киллуа"), FoxAnimal("Гон")]
 
-e=Elephant("Григорий", 7)
-e.DoSound()
-e.Eat("бананы")
+for i in f:
+    i.DoSound()
 
-r=Rabbit("Акакий", 1)
-r.Play()
+for i in f:
+    i.Eat(3, "мясо")
+
+for i in f:
+    i.IsFeeded()
+
+
+
+
+
