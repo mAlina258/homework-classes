@@ -1,5 +1,7 @@
 from BaseAnimal import *
 from FoxAnimal import *
+from ElephantAnimal import *
+from RabbitAnimal import *
 
 f = [FoxAnimal("Киллуа"), FoxAnimal("Гон")]
 
