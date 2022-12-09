@@ -8,7 +8,7 @@ class FoxAnimal(BaseAnimal):
         self.__biome = "лес"
         self._sound = "фр-фр-фр"
         self.__liveSquare = 3  # размер клетки
-        self.__mass = 0
+        self.__mass = 8
         self.__isPredator = True  # хищник?
         self.__foodTypes = ["ягоды", "мясо"]  # продукты
         self.__foodVolume = 5  # кол-во еды
