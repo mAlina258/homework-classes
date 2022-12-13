@@ -19,20 +19,4 @@ class RabbitAnimal(BaseAnimal):
     def DoSound(self):
         print(self.name, "сказал/а на кроличьем: ", self._sound)
 
-    def Eat(self, value, foodType):
-        if (foodType in self.__foodTypes and value<= self.__foodVolume):
-            self.__mass += value
-            self.__amountEaten += value
-            print("Кролик ", self.name, " говорит: покушал", value, foodType)
-        else:
-            print("Кролик ", self.name, " говорит: не буду", foodType)
 
-    def IsFeeded(self):
-        if (self.__amountEaten >= self.__foodVolume):
-            self.__isFeeded = True
-            print("Кролик ", self.name, " говорит: я наелся/ась!!")
-        else:
-            print(self.name, " говорит: я еще не наелся/ась")
-
-    def Play(self):
-        print("Кролик ", self.name, " говорит: поиграл!!")
