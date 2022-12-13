@@ -13,69 +13,66 @@ class BaseAnimal:
         self.__amountEaten = 0       #кол-во съеденного
         self.__isFeeded = False       #сытость
 
-        @property
-        def Types(self):
-            return self.__type
+    @property
+    def Predator(self):
+        return self.__isPredator
 
-        @property
-        def Age(self):
-            return self.__age
+    @property
+    def Types(self):
+        return self.__type
 
-        @Age.setter
-        def Age(self, value):
-            if(value is int):
-                if(value >=0):
-                    self.__age = value
+    @property
+    def Age(self):
+        return self.__age
 
-        @property
-        def Sound(self):
-            return self._sound
+    @Age.setter
+    def Age(self, value):
+        if(value is int):
+            if(value >=0):
+                self.__age = value
 
-        @property
-        def LiveSquare(self):
-            return self.__liveSquare
+    @property
+    def Sound(self):
+        return self._sound
 
-        @property
-        def Mass(self):
-            return self.__mass
+    @property
+    def LiveSquare(self):
+        return self.__liveSquare
 
-        @Age.setter
-        def Mass(self, value):
-            if (value is int):
-                if (value >= 0):
-                    self.__mass = value
+    @property
+    def Mass(self):
+        return self.__mass
 
-        @property
-        def IsPredator(self):
-            return self.__isPredator
+    @Age.setter
+    def Mass(self, value):
+        if (value is int):
+            if (value >= 0):
+                self.__mass = value
 
-        @property
-        def FoodTypes(self):
-            return self.__foodTypes
+    @property
+    def IsPredator(self):
+        return self.__isPredator
 
-        @property
-        def IsFeeded(self):
-            return self.__isFeeded
+    @property
+    def FoodTypes(self):
+        return self.__foodTypes
 
-        def DoSound(self):
-            print(self.name, "сказал/а: ", self._sound)
+    @property
+    def IsFeeded(self):
+        if (self.__amountEaten >= self.__foodVolume):
+            self.__isFeeded = True
+        return self.__isFeeded
 
-        def Eat(self, value, foodType):
-            if (foodType in self.__foodTypes and value<= self.__foodVolume):
-                self.__mass += value
-                self.__amountEaten += value
-                print(self.name, ": покушал", value, foodType)
-            else:
-                print(self.name, ": не буду", foodType)
+    def DoSound(self):
+        print(self.name, "сказал/а: ", self._sound)
 
-        def IsFeeded(self):
-            if (self.__amountEaten >= self.__foodVolume):
-                self.__isFeeded = True
-                print(self.name, " говорит: я наелся/ась!!")
-            else:
-                print(self.name, " говорит: я еще не наелся/ась")
+    def Eat (self, value, foodType):
+        if (foodType in self.__foodTypes and value<= self.__foodVolume):
+            self.__mass += value
+            self.__amountEaten += value
+            print(self.__type, self.name, ": покушал", value, foodType)
+        else:
+            print(self.__type, self.name, ": не буду", foodType)
 
-        def Play(self):
-            print(self.name, ": поиграл!!")
-
-
+    def Play(self):
+        print(self.__type, self.name, ": поиграл!!")
