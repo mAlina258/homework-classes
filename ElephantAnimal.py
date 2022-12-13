@@ -19,20 +19,3 @@ class ElephantAnimal(BaseAnimal):
     def DoSound(self):
         print(self.name, "сказал/а на слоновьем: ", self._sound)
 
-    def Eat(self, value, foodType):
-        if (foodType in self.__foodTypes and value<= self.__foodVolume):
-            self.__mass += value
-            self.__amountEaten += value
-            print("Слон ", self.name, " говорит: покушал", value, foodType)
-        else:
-            print("Слон ", self.name, " говорит: не буду", foodType)
-
-    def IsFeeded(self):
-        if (self.__amountEaten >= self.__foodVolume):
-            self.__isFeeded = True
-            print("Слон ", self.name, " говорит: я наелся/ась!!")
-        else:
-            print(self.name, " говорит: я еще не наелся/ась")
-
-    def Play(self):
-        print("Слон ", self.name, " говорит: поиграл!!")
