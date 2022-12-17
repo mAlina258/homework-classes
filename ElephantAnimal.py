@@ -1,19 +1,18 @@
 from BaseAnimal import *
 
 class ElephantAnimal(BaseAnimal):
-
     def __init__(self, name):
         super().__init__("Слон", name)
-        self.__age = 20
-        self.__biome = "саванна"
+        self._age = 20
+        self._biome = "саванна"
         self._sound = "*звуки слона*"
-        self.__liveSquare = 120  # размер клетки
-        self.__mass = 5000
-        self.__isPredator = False  # хищник?
-        self.__foodTypes = ["бананы", "сено"]  # продукты
-        self.__foodVolume = 50  # кол-во еды
-        self.__amountEaten = 0  # кол-во съеденного
-        self.__isFeeded = False  # сытость
+        self._liveSquare = 120  # размер клетки
+        self._mass = 5000
+        self._isPredator = False  # хищник?
+        self._foodTypes = ["бананы", "сено"]  # продукты
+        self._foodVolume = 50  # кол-во еды
+        self._amountEaten = 0  # кол-во съеденного
+        self._isFeeded = False  # сытость
 
 
     def DoSound(self):

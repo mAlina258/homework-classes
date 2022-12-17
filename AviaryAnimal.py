@@ -12,5 +12,3 @@ class AviaryAnimal:
         if (self.__biome == animal and self.__isPredator == False and self.__square >= self.__liveSquare):
             self.__animalInAviary.append(animal)
 
-    def Feedind(self, food):
-        if (self.__foodTypes = )
