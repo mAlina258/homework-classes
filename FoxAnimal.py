@@ -11,7 +11,7 @@ class FoxAnimal(BaseAnimal):
         self._foodTypes = ["ягоды", "мясо"]  # продукты
         self._foodVolume = 5  # кол-во еды
         self._amountEaten = 0  # кол-во съеденного
-        self.__sFeeded = False  # сытость
+        self._isFeeded = False  # сытость
 
     def DoSound(self):
         print(self.name, "сказал/а на лисьем: ", self._sound)

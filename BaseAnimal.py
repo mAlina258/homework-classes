@@ -15,20 +15,20 @@ class BaseAnimal:
 
 @property
 def Predator(self):
-    return self.__isPredator
+    return self._isPredator
 
 @property
 def Types(self):
-    return self.__type
+    return self._type
 
 @property
 def Age(self):
-    return self.__age
+    return self._age
 
 @Age.setter
 def Age(self, value):
     if(value is int and value >=0):
-        self.__age = value
+        self._age = value
 
 @property
 def Sound(self):
@@ -36,41 +36,41 @@ def Sound(self):
 
 @property
 def LiveSquare(self):
-    return self.__liveSquare
+    return self._liveSquare
 
 @property
 def Mass(self):
-    return self.__mass
+    return self._mass
 
 @Age.setter
 def Mass(self, value):
     if (value is int and value >= 0):
-        self.__mass = value
+        self._mass = value
 
 @property
 def IsPredator(self):
-    return self.__isPredator
+    return self._isPredator
 
 @property
 def FoodTypes(self):
-    return self.__foodTypes
+    return self._foodTypes
 
 @property
 def IsFeeded(self):
-    if (self.__amountEaten >= self.__foodVolume):
-        self.__isFeeded = True
-    return self.__isFeeded
+    if (self._amountEaten >= self._foodVolume):
+        self._isFeeded = True
+    return self._isFeeded
 
 def DoSound(self):
     print(self.name, "сказал/а: ", self._sound)
 
 def Eat(self, value, foodType):
-    if (foodType in self.__foodTypes and value<= self.__foodVolume):
-        self.__mass += value
-        self.__amountEaten += value
-        print(self.__type, self.name, ": покушал", value, foodType)
+    if (foodType in self._foodTypes and value<= self._foodVolume):
+        self._mass += value
+        self._amountEaten += value
+        print(self._type, self.name, ": покушал", value, foodType)
     else:
-        print(self.__type, self.name, ": не буду", foodType)
+        print(self._type, self.name, ": не буду", foodType)
 
 def Play(self):
-    print(self.__type, self.name, ": поиграл!!")
+    print(self._type, self.name, ": поиграл!!")
