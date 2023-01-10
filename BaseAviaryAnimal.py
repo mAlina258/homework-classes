@@ -1,3 +1,4 @@
+import BaseAnimal
 from BaseAnimal import *
 class BaseAviaryAnimal:
 
@@ -48,9 +49,11 @@ class BaseAviaryAnimal:
         self._animalInAviary.remove(animal)
         self._remainingSpace += BaseAnimal._liveSquare
 
-    def FeedingAnimals(self, food, number):
-        if (food == BaseAnimal._foodTypes):
-            self._foodInAviary.append(food + number)
+    def FeedingAnimal(self, food, number):
+        for i in self._animalInAviary:
+            if (food == i._foodTypes):
+                BaseAnimal.Eat
+                self._foodInAviary.append(food + number)
 
     def DoAnimalSound(self):
         for i in self._animalInAviary:
